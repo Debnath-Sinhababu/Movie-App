@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Banner from "./banner";
+import Movielist from "./movielist";
+import Navbar from "./navbar";
+import React from "react";
+import Footer from "./footer";
+import { useState } from "react";
+import Favourite from "./favourite";
+import ReactDOM from "react-dom/client";
 
-function App() {
+function App(){
+  let[page,changepage]=useState([1]);
+  let updatepage=(obj)=>{
+  let arr=[...obj];
+  changepage(arr);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar/>
+      <Banner arrpage={page}/>
+      <Movielist arrpage={page}/>
+      <Footer updatepage={updatepage} arrpage={page}/>
+    
     </div>
-  );
+  )
 }
-
 export default App;
