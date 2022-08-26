@@ -5,8 +5,8 @@ function Navbar(){
         justifyContent:'flex-start'
     }
     let style2={
-        marginLeft:40,
-        marginTop:30
+        marginLeft:'3rem',
+        marginTop:'3rem'
     }
     return(
         <div style={style1}>

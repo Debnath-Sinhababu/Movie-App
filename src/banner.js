@@ -12,15 +12,16 @@ function Banner(props) {
     position: "relative",
   };
   let style2 = {
-    width: "100%",
+    width: "100vw",
     height: "60vh",
-    marginLeft:'20px'
+  
+    marginLeft:20
   };
   let style3 = {
     position: "absolute",
-    top: 230,
-    left: 80,
-    width:'100vw'
+    top: '5vh',
+    left: '20vw',
+    width:'60vw'
   };
 
   useEffect(()=>{
@@ -31,6 +32,7 @@ function Banner(props) {
      
     })
   },[props.arrpage.length])
+
   let movie=movies.results;
  let i= Math.floor(Math.random()*20);
   return (
@@ -47,12 +49,12 @@ function Banner(props) {
       }
       { apidata1.length>0&&
         <div className="card-body" style={style3}>
-          <h1 className="card-title" style={{width:'100vw',color:'white'}}>{apidata1[0].original_title}</h1>
+          <h1 className="card-title" style={{width:'100%',color:'white',wordBreak:'break-word'}}>{apidata1[0].original_title}</h1>
           
         </div>
 }
         
-          <h1 style={{marginLeft:'500px',fontWeight:'Bold'}}>Trending</h1>
+          <h1 style={{marginLeft:'50vw',fontWeight:'Bold'}}>Trending</h1>
         
       </div>
     

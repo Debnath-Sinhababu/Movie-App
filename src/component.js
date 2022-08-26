@@ -75,10 +75,12 @@ function Component(obj){
         <div
             className="card"
             style={{
-              width: "18rem",
-              marginRight: "110px",
+              width: "30rem",
+              marginRight: "3rem",
               position: "relative",
               marginTop: "30px",
+              
+              height:'30rem'
             }}
             onMouseEnter={() => {
                
@@ -91,7 +93,7 @@ function Component(obj){
             <img
               src={`https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${obj.obj.backdrop_path}`}
               className="card-img-top"
-              style={{ width: "20vw", height: "40vh" }}
+              style={{ width:'100%',height:'100%' }}
               alt="..."
             />
             <div

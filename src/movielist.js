@@ -12,12 +12,12 @@ function Movielist(props) {
 
   let style1 = {
     display: "flex",
-    flexWrap: "wrap",
+    flexWrap:'wrap',
     justifyContent: "center",
-    marginTop: 10,
-    width: "100%",
+    marginTop: '1rem',
+    width: "100vw",
     overflowX: "hidden",
-    paddingLeft: "70px",
+   
   };
 
   function addtofavourite(id) {}

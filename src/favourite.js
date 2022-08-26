@@ -111,14 +111,15 @@ let Favourite = () => {
       <div style={style2}>
         <div
           class="btn-group-vertical"
-          style={{ marginLeft: "100px", width: "15vw" }}
+          style={{ width: "20rem",padding:'1rem',marginRight:'5rem',display:'flex',justifyContent:'center',alignItems:'center' }}
         >
           <div
             class="btn-group"
             role="group"
             aria-label="Basic outlined example"
+            style={{display:'flex',justifyContent:'center',flexDirection:'column',alignItem:'center',flexWrap:'wrap',wordBreak:'break-word'}}
           >
-            <button type="button" class="btn btn-outline-primary" onClick={()=>{
+            <button type="button" class="btn btn-outline-primary"  onClick={()=>{
                 let arr =[];
                 let apiarr= JSON.parse(localStorage.getItem('clonemovie'))
                 apiarr.map((movieobj) => {
@@ -135,7 +136,7 @@ let Favourite = () => {
 
             }}>All Geners</button>
             {temparr.map((tempele) => (
-              <button type="button" class="btn btn-outline-primary" onClick={()=>{
+              <button type="button" class="btn btn-outline-primary" style={{border:'1px solid'}} onClick={()=>{
                 let allbtn=document.querySelectorAll('button');
                 let btnarr=[...allbtn];
                 btnarr.filter((btn)=>{
@@ -185,7 +186,8 @@ let Favourite = () => {
             ))}
           </div>
         </div>
-        <div>
+        <div style={{ display:'flex',justifyContent:'center',flexDirection:'column'}}>
+          <div style={{display:'flex',flexWrap:'wrap'}}>
           <input
             type="search"
             placeholder="search"
@@ -193,7 +195,7 @@ let Favourite = () => {
               marginLeft: 0,
               padding: 7,
               textAlign: "center",
-              width: "30vw",
+               width:'30vw'
             }}
             onInput={(e)=>{
               if(e.target.value==''){
@@ -226,9 +228,10 @@ let Favourite = () => {
             type="number"
             name=""
             id=""
-            style={{ width: "30vw", padding: 7 }}
+            style={{ padding: 7 ,width:'30vw'}}
           />
-          <table class="table" style={{ width: "100%" }}>
+          </div>
+          <table class="table" style={{ width: "70vw" }}>
             <thead>
               <tr class="row">
                 <th class="col-2">Title</th>
